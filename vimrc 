@@ -1,0 +1,39 @@
+set relativenumber number
+syntax enable
+set nocompatible
+filetype plugin on
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set encoding=utf-8
+set termguicolors
+set hlsearch
+set laststatus=2
+set noshowmode
+let mapleader = " "
+let g:user_emmet_leader_key=','
+
+nnoremap <leader>f :Lex<CR>:vertical resize 30<CR>
+nnoremap <leader>g :Goyo<CR>
+
+
+call plug#begin()
+
+Plug 'junegunn/goyo.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'tribela/vim-transparent'
+Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/AutoComplPop'
+Plug 'itchyny/lightline.vim'
+
+call plug#end()
+
+colorscheme nord
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
